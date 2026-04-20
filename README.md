@@ -2,7 +2,7 @@ Les ajustements Léon Acide bogue le marché d'application !
 
 
 Qu'est-ce que Léon Acide [EXP] ?
-C'est un outil de suppression de fichiers inutiles et personnalisations (de la performance).
+C'est un outil de suppression de fichiers inutiles et de personnalisations (de la performance).
 
 
 Pourquoi et est-ce bien utile ?
