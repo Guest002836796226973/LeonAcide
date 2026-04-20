@@ -11,7 +11,7 @@ Pourquoi et est-ce bien utile ?
 
 • Une protection certaine contre les attaques dirigées par la firme logicielle au travers du système de mise à jour.
 
-• Suppression d'images contrefaites, on note une amélioration de 95%.
+• La suppression d'images contrefaites, on note une amélioration de 95%.
 
 
 Mot de passe (extraire avec 7zip) : LeonAcide
