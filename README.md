@@ -1,3 +1,4 @@
+<h1>Léon Acide</h1>
 Les ajustements Léon Acide bogue le marché d'application !
 
 
@@ -22,3 +23,4 @@ Comment utiliser ce script .batch ? Extraire Léon Acide [EXP] dans un dossier*,
 
 
 *pour les utilisateurs qui souhaite réinstaller le .batch après avoir utilisés le patch "Fixer les permissions Windows", créer un dossier "LeonAcide", en accordant le privilège, à la racine de votre disque "C:".
+<hr />
