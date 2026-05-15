@@ -13,12 +13,12 @@ echo.
 echo   Un navigateur en roue libre !
 echo   Réduction des caches et sans hameçonnage.
 echo.
+echo =================================================================
+echo.
 echo   [A] Activer le patch, [D] Désactiver :(
 set /P Temps=• [A/D] :
 if /I "%Temps%"=="A" goto patch_activer
 if /I "%Temps%"=="D" goto patch_desactiver
-echo =================================================================
-
 goto invalidchoice
 
 :patch_activer
