@@ -25,5 +25,5 @@ Comment utiliser ce script .batch ? Extraire Léon Acide [EXP] dans un dossier*,
 *pour les utilisateurs qui souhaite réinstaller le .batch après avoir utilisés le patch "Fixer les permissions Windows", créer un dossier "LeonAcide", en accordant le privilège, à la racine de votre disque "C:".
 <hr />
 <h1>Léon Acide [EXP 2.0 ADDICTION]</h1>
-C'est un patch pour le navigateur Chrome et le journal.
-Réduction des caches et brise l'hameçonnage.
+<p>C'est un patch pour le navigateur Chrome et le journal.</p>
+<p>Réduction des caches et brise l'hameçonnage.</p>
