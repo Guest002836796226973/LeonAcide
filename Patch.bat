@@ -39,6 +39,7 @@ icacls "%USERPROFILE%\AppData\Local\Microsoft\Windows\WebCache" /inheritance:D /
 icacls "C:\Windows\Logs" /inheritance:R /T /Q
 echo.
 echo   ScriptCache Utilisateur
+icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\*" /remove "BUILTIN\Administrators" /T /Q
 icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\Service Worker\ScriptCache" /grant "BUILTIN\Users:(F)" /T /Q
 echo.
 echo   Patch activé.
