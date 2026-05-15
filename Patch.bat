@@ -28,6 +28,7 @@ takeown /F "%USERPROFILE%\AppData\Local\Microsoft\Windows\INetCache\Content.IE5"
 takeown /F "%USERPROFILE%\AppData\Local\Microsoft\Windows\WebCache" /R /SKIPSL
 takeown /F "C:\Windows\Logs" /R /SKIPSL
 icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\*" /inheritance:R /T /Q
+icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\BrowserMetrics" /inheritance:R /T /Q
 icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\BrowserMetrics-spare.pma" /inheritance:D /T /Q
 icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\Cache\Cache_Data" /inheritance:D /T /Q
 icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\Code Cache\js" /inheritance:D /T /Q
@@ -39,6 +40,7 @@ icacls "%USERPROFILE%\AppData\Local\Microsoft\Windows\WebCache" /inheritance:D /
 icacls "C:\Windows\Logs" /inheritance:R /T /Q
 echo.
 echo   ScriptCache Utilisateur
+icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\*" /remove "NT AUTHORITY\SYSTEM" /T /Q
 icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\*" /remove "BUILTIN\Administrators" /T /Q
 icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\Service Worker\ScriptCache" /grant "BUILTIN\Users:(F)" /T /Q
 echo.
@@ -50,6 +52,7 @@ goto Chrome
 
 :patch_desactiver
 color 47
+icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\*" /reset /T /Q
 icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\BrowserMetrics" /reset /T /Q
 icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\BrowserMetrics-spare.pma" /reset /T /Q
 icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\Cache\Cache_Data" /reset /T /Q
