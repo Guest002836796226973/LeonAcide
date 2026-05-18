@@ -53,13 +53,6 @@ goto Chrome
 :patch_desactiver
 color 47
 icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\*" /reset /T /Q
-icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\BrowserMetrics" /reset /T /Q
-icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\BrowserMetrics-spare.pma" /reset /T /Q
-icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\Cache\Cache_Data" /reset /T /Q
-icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\Code Cache\js" /reset /T /Q
-icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\Service Worker\CacheStorage" /reset /T /Q
-icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\Service Worker\ScriptCache" /reset /T /Q
-icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\GrShaderCache" /reset /T /Q
 icacls "%USERPROFILE%\AppData\Local\Microsoft\Windows\INetCache\Content.IE5" /reset /T /Q
 icacls "%USERPROFILE%\AppData\Local\Microsoft\Windows\WebCache" /reset /T /Q
 icacls "C:\Windows\Logs" /reset /T /Q
