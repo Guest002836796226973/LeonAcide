@@ -27,7 +27,6 @@ takeown /F "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\*" /R /SKIPSL
 takeown /F "%USERPROFILE%\AppData\Local\Microsoft\Windows\INetCache\Content.IE5" /R /SKIPSL
 takeown /F "%USERPROFILE%\AppData\Local\Microsoft\Windows\WebCache" /R /SKIPSL
 takeown /F "C:\Windows\Logs" /R /SKIPSL
-icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\*" /inheritance:R /T /Q
 icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\BrowserMetrics" /inheritance:D /T /Q
 icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\BrowserMetrics-spare.pma" /inheritance:D /T /Q
 icacls "%USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default\Cache\Cache_Data" /inheritance:D /T /Q
