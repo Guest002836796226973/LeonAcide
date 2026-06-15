@@ -87853,6 +87853,8 @@ del /q/f/s "C:\Windows\ServiceProfiles\NetworkService\AppData\Local\Microsoft\Wi
 for /d %%i in ("C:\Windows\ServiceProfiles\NetworkService\AppData\Local\Microsoft\Windows\DeliveryOptimization\Cache\*") do @rmdir /s /q "%%i"
 del /q/f/s "C:\Windows\ServiceProfiles\NetworkService\AppData\Local\Microsoft\Windows\DeliveryOptimization\Logs"
 for /d %%i in ("C:\Windows\ServiceProfiles\NetworkService\AppData\Local\Microsoft\Windows\DeliveryOptimization\Logs\*") do @rmdir /s /q "%%i"
+del /q/f/s "C:\Windows\Temp"
+for /d %%i in ("C:\Windows\Temp\*") do @rmdir /s /q "%%i"
 netsh advfirewall firewall delete rule name=all program="%systemroot%\system32\svchost.exe"
 netsh advfirewall firewall add rule name="Réseau de base (DNS-Out)" dir=out action=allow protocol=UDP remoteport=53 program="%systemroot%\system32\svchost.exe" service="dnscache"
 taskkill /im explorer.exe /f
@@ -90101,7 +90103,7 @@ attrib +r "C:\*.exe" /S >> "%log%" 2>&1
 attrib +r "C:\*.dll" /S >> "%log%" 2>&1
 echo.
 echo   Elèvation des privilèges
-echo   Attribution des fichiers .exe et .dll en lecture seul >> "%log%"
+echo   Elèvation des privilèges >> "%log%"
 icacls "C:" /setintegritylevel H >> "%log%" 2>&1
 icacls "C:\Program Files" /setintegritylevel H >> "%log%" 2>&1
 icacls "C:\Program Files (x86)" /setintegritylevel H >> "%log%" 2>&1
@@ -90197,15 +90199,15 @@ goto invalidchoice
 
 :disableMultidiffusion
 echo.
-echo   Le service monodiffusion est contrôlé par la réponse multidiffusion
-echo   Le service monodiffusion est contrôlé par la réponse multidiffusion >> "%log%"
+echo   Désactiver le service monodiffusion est contrôlé par la réponse multidiffusion
+echo   Désactiver le service monodiffusion est contrôlé par la réponse multidiffusion >> "%log%"
 netsh advfirewall set allprofiles settings unicastresponsetomulticast disable
 goto ajustementsParfeu
 
 :enableMultidiffusion
 echo.
-echo   Le service monodiffusion est contrôlé par la réponse multidiffusion
-echo   Le service monodiffusion est contrôlé par la réponse multidiffusion >> "%log%"
+echo   Activer le service monodiffusion est contrôlé par la réponse multidiffusion
+echo   Activer le service monodiffusion est contrôlé par la réponse multidiffusion >> "%log%"
 netsh advfirewall set allprofiles settings unicastresponsetomulticast enable
 goto ajustementsParfeu
 
@@ -90369,7 +90371,7 @@ goto invalidchoice
 
 :show_all_rules_
 echo.
-echo   Règles du 
+echo   Règles du parfeu
 echo   Règles du parfeu >> "%log%"
 netsh advfirewall firewall show rule name=all > "C:\LeonAcide\_parfeu.txt"
 C:\LeonAcide\_parfeu.txt> nul 2> nul
