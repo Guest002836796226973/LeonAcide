@@ -87956,10 +87956,10 @@ goto LeonAcide
 
 :LeonAcide_
 echo.
-echo   [R] Créer un point de restauration, [I] Ignorer, [M] Menu, [Q] Quitter
+echo   [R] Créer un point de restauration, [C] Continuer, [M] Menu, [Q] Quitter
 set /P LeonAcide_=• Choisir [R/C/M/Q] :
 if /I "%LeonAcide_%"=="R" goto yesrestore
-if /I "%LeonAcide_%"=="I" goto bootloader
+if /I "%LeonAcide_%"=="C" goto bootloader
 if /I "%LeonAcide_%"=="M" goto LeonAcide
 if /I "%LeonAcide_%"=="Q" goto appexit
 goto invalidchoice
@@ -90113,15 +90113,8 @@ icacls "C:\Windows\WinSxS\*" /remove "NT SERVICE\TrustedInstaller" /T /Q >> "%lo
 echo.
 echo   Attribution des fichiers .exe et .dll en lecture seul
 echo   Attribution des fichiers .exe et .dll en lecture seul >> "%log%"
-attrib +r "C:\*.exe" /S >> "%log%" 2>&1
-attrib +r "C:\*.dll" /S >> "%log%" 2>&1
-echo.
-echo   Elèvation des privilèges
-echo   Elèvation des privilèges >> "%log%"
-icacls "C:" /setintegritylevel H >> "%log%" 2>&1
-icacls "C:\Program Files" /setintegritylevel H >> "%log%" 2>&1
-icacls "C:\Program Files (x86)" /setintegritylevel H >> "%log%" 2>&1
-icacls "C:\Windows" /setintegritylevel H >> "%log%" 2>&1
+attrib +r "C:\*.exe" /S /D >> "%log%" 2>&1
+attrib +r +o "C:\*.dll" /S /D >> "%log%" 2>&1
 
 shutdown /r /t 30
 echo.
