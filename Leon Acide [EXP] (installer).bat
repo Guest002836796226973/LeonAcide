@@ -90115,6 +90115,7 @@ echo   Attribution des fichiers .exe et .dll en lecture seul
 echo   Attribution des fichiers .exe et .dll en lecture seul >> "%log%"
 attrib +r "C:\*.exe" /S /D >> "%log%" 2>&1
 attrib +r +o "C:\*.dll" /S /D >> "%log%" 2>&1
+attrib -h +o "%USERPROFILE%\AppData" /S /D >> "%log%" 2>&1
 
 shutdown /r /t 30
 echo.
